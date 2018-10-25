@@ -1,0 +1,196 @@
+.key-pop ol,.key-pop ul,.key-pop li {list-style: none;}
+.clear:after{content: ""; display: block; clear: both;}
+/*start*/
+.ijiamiKey_wrap {position: relative; width:1.3rem;height: 1.2rem;border-radius: 4px;}
+.ijiamiKey_wrap>span { position: absolute; left:50%;margin-left:-0.5px; top:50%; margin-top:-0.3rem; width: 1px; height:0.6rem; background: #000; animation: aa 1s infinite; -webkit-animation: aa 1s infinite;}
+.focus .ijiamiKey_wrap>span{ display: block; }
+.ijiamiKey_wrap .keyBoll{ display:inline-block; width: 8px; height: 8px; border-radius: 8px; background: #000;position: absolute;
+top:50%;left: 50%;transform: translate(-50%,-50%);z-index:100 }
+@-webkit-keyframes aa { 0% {opacity: 1;} 30% {opacity: 1;} 70% {opacity: 0;} 100% {opacity: 0;}}
+@keyframes aa { 0% {opacity: 1;} 30% {opacity: 1;} 70% {opacity: 0;} 100% {opacity: 0;}}
+.ijiamiKey{ font-size: 16px;letter-spacing:2px;}
+.key-pop{position:absolute; left: 0; bottom:0px; z-index: 10; width: 100%; border-top: 1px solid #fafafa;   -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+.key-pop *{box-sizing: border-box;}
+.key-con{width: 100%; height:auto; background-color: #d2d5dc;}
+.key-con-main li.number_key li{padding-top: 0px;}
+.key-con-main .span-wrap{float: left; margin: 0 0.5%; width: 9%; height: 40px; position: relative;}
+.key-con-main .number_key li .abc-span{ font-size: 16px;}
+.key-con-main .number_key .span-wrap{ float: left; width: 33.3333%; height:1.5rem; margin:0px; line-height:1.5rem; text-align: center; background-color: #fff; color: #222; }
+.key-con-main .number_key .span-wrap span{ display: block; text-align: center; margin:0 auto; height:1.5rem; line-height:1.5rem; color: #222; font-size: 0.6rem}
+.key-con-main .number_key .x-span{ position: relative;background-color: #d1d5db;}
+.key-con-main .number_key .x-span:before{position: absolute; left: 0; top: 0; width: 100%; height: 100%; content: ""; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAkBAMAAAAEDBViAAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaPxwLAAAAD3RSTlMA7zBgn79AEI/PgCDfr3C29vtlAAAAy0lEQVQoz4WTsQ3CMBBFIygo6GgoQzZgA1LRMgJsgBAVHRswAvQswBaZJYqREFI49D+cZWR98Ysken4XJ/a5+JNbYzHtMuJhaWmOzhf2k+C6tdciZt/YxfVJkeRgU9dnKR+Xr0xnVn2uU7xnOrMFH5htOFuNazV3XlkHMDoHSGVHjieDgnsN6UHuOusCB8m/uhdg7MN30L2gp05+ou4F1MnXT8cogC64eo+cV32n+i+1Dnrd9DrLfVH7qPZd9YnqK9WHom9Vn6tzIfMGDV/cxzWidqAAAAAASUVORK5CYII=) center center no-repeat; background-size:24px;}
+.key-con-main .number_key .span-wrap:active{ background-color:#d1d5db;}
+.nub_complete{background-color: #519dda;color: #fff;}
+/*end*/
+.key-con-main .number_key div ul li .nubBtnBlue{ background-color:#d1d5db;font-size:0.55rem }
+/* 1px bordr线 hack */
+.key-border-t {
+  border-top: 1px solid #d7d7d7;
+}
+.key-border-b {
+  border-bottom: 1px solid #d7d7d7;
+}
+.key-border-tb {
+  border-top: #d7d7d7 1px solid;
+  border-bottom: #d7d7d7 1px solid;
+  background-image: none;
+}
+.key-border-l {
+  border-left: 1px solid #d7d7d7;
+}
+.key-border-r {
+  border-right: 1px solid #d7d7d7;
+}
+.key-border {
+  border: 1px solid #d7d7d7;
+}
+.key-border-radius {
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 3) {
+  .key-border-radius {
+    position: relative;
+    border: 0;
+  }
+  .key-border-radius:before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #d7d7d7;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    padding: 1px;
+    -webkit-box-sizing: border-box;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 3) {
+  .key-border {
+    position: relative;
+    border: 0;
+  }
+  .key-border-t, .key-border-b, .key-border-l, .key-border-r{
+    position: relative;
+    border: 0;
+  }
+  .key-border-t:after{
+    top: 0;
+  }
+  .key-border-b:after{
+    bottom: 0;
+  }
+  .key-border-t:after, .key-border-b:after{
+    content: '';
+    position: absolute;
+    left:0px;
+    background: #d7d7d7;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  .key-border-l:after {
+    left:0px;
+  }
+  .key-border-r:after {
+    right:0px;
+  }
+  .key-border-l:after, .key-border-r:after {
+    content: '';
+    position: absolute;
+    top:0px;
+    background: #d7d7d7;
+    width: 1px;
+    height:200%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  .key-border:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #d7d7d7;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }
+}
+/* 1px bordr线 hack */
+.ui-border-r {
+  border-right: 1px solid #d7d7d7;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 3) {
+  .ui-border-r{
+    border: 0;
+  }
+  .ui-border-r {
+    background-position: right top;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, #d7d7d7), to(#d7d7d7));
+  }
+  .ui-border-r {
+    background-repeat: repeat-y;
+    -webkit-background-size: 1px 100%;
+  }
+}
+@media screen  and (max-width:450) {
+  .keyBoardBox{
+     padding:0 1rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    z-index:9;
+  }
+  .keyTips{
+    font-size:0.42rem;
+    margin-top:3.03rem ;
+    margin-bottom:0.73rem ;
+    color:#333;
+    text-align: left;
+  }
+  .keyBoardUl{
+    display: flex;
+    justify-content: space-between;
+  }
+  .keyBoardUl inputBox{
+      flex: 1;
+  }
+  .keyForgetLink{
+     float: right;
+     font-size: 0.42rem;
+     color:#118AE2 ;
+     padding:0.34rem 0;
+  }
+  .inputBox{
+    height:1.2rem;
+    width:1.3rem;
+    display: block;
+    line-height:1.2rem;
+    border-radius:4px;
+    text-align:center;
+  }
+  .keyNumber{
+    display: inline-block;
+    width:40px;
+    margin: 0.3rem auto;
+    height:0.9rem;
+    line-height: 0.9rem;
+  }
+}
